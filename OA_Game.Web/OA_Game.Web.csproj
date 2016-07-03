@@ -264,6 +264,7 @@
     <Content Include="Content\images\slide\5.jpg" />
     <Content Include="Content\images\slide\6.jpg" />
     <Content Include="Content\jquery-rebox.css" />
+    <Content Include="Content\Test.mp3" />
     <Content Include="Content\tinycarousel.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
