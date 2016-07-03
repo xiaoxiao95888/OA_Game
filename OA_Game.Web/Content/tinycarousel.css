@@ -1,0 +1,120 @@
+/* Tiny Carousel */
+#slider1 {
+    height: 1%;
+    margin: 30px 0 0;
+    overflow: hidden;
+    position: relative;
+    padding: 0 50px 10px;
+}
+
+    #slider1 .viewport {
+        height: 204px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #slider1 .buttons {
+        /*background: #C01313;
+    border-radius: 35px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 22px;*/
+        width: 22px;
+        height: 57px;
+        line-height: 22px;
+    }
+
+    /*#slider1 .next {
+    right: 0;
+    left: auto;
+    top: 50%;
+}*/
+    #slider1 .next {
+        position: absolute;
+        top: 35%;
+        left: 0;
+        width: 22px;
+        height: 57px;
+        text-align: center;
+        text-decoration: none;
+        line-height: 57px;
+        /*background-image:url(../Content/images/next.png);*/
+    }
+
+    #slider1 .prev {
+        position: absolute;
+        top: 35%;
+        right: 0;
+        width: 22px;
+        height: 57px;
+        text-align: center;
+        text-decoration: none;
+        line-height: 57px;
+        /*background-image:url(../Content/images/next.png);*/
+    }
+
+    #slider1 .buttons:hover {
+        /*color: #C01313;
+    background: #fff;*/
+    }
+
+    #slider1 .disable {
+        visibility: hidden;
+    }
+
+    #slider1 .overview {
+        list-style: none;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        width: 330px;
+        left: 0;
+        top: 0;
+    }
+
+        #slider1 .overview li {
+            float: left;
+            margin: 0 20px 0 0;
+            padding: 1px;
+            height: 200px;
+            /*border: 1px solid #dcdcdc;*/
+            width: 326px;
+            background-size: 100%;
+            overflow: hidden;
+        }
+
+            #slider1 .overview li img {
+                width: 326px;
+                height: 200px;
+            }
+
+            #slider1 .overview li img {
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -o-transform: scale(1);
+                transform: scale(1);
+                -webkit-transition: all 1s ease;
+                -moz-transition: all 1s ease;
+                -o-transition: all 1s ease;
+                transition: all 1s ease;
+            }
+
+            #slider1 .overview li:hover img {
+                -webkit-transform: scale(1.15);
+                -moz-transform: scale(1.15);
+                -o-transform: scale(1.15);
+                transform: scale(1.15);
+                -webkit-transition: all 1s ease;
+                -moz-transition: all 1s ease;
+                -o-transition: all 1s ease;
+                transition: all 1s ease;
+            }

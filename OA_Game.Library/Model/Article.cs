@@ -17,6 +17,7 @@ namespace OA_Game.Library.Model
         public Guid ArticleCategoryId { get; set; }
         [ForeignKey("ArticleCategoryId")]
         public virtual ArticleCategory ArticleCategory { get; set; }
+        public string ThumbnailUrl { get; set; }
         public DateTime CreatedTime { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime? UpdateTime { get; set; }

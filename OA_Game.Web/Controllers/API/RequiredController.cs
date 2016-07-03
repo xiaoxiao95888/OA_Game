@@ -28,11 +28,11 @@ namespace OA_Game.Web.Controllers.API
             {
                 return Failed("请填写完整");
             }
-            if (!Regex.IsMatch(model.Email,
-                    @"^([/w-/.]+)@((/[[0-9]{1,3}/.[0-9]{1,3}/.[0-9]{1,3}/.)|(([/w-]+/.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(/]?)$"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(model.Email, @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$") == false)
             {
                 return Failed("邮箱格式错误");
             }
+
             if (_requiredService.GetRequireds().Any(n => n.Email == model.Email))
             {
                 return Failed("禁止重复提交");
@@ -52,7 +52,10 @@ namespace OA_Game.Web.Controllers.API
             var model = new PageRequiredModel
             {
                 RequiredModels =
-                    data.Select(
+                    data.OrderByDescending(n => n.UpdateTime)
+                        .Skip((pageIndex - 1) * pageSize)
+                        .Take(pageSize)
+                        .Select(
                         n =>
                             new RequiredModel
                             {
@@ -62,7 +65,7 @@ namespace OA_Game.Web.Controllers.API
                                 PersonName = n.PersonName
                             }).ToArray(),
                 TotalCount = totalcount,
-                AllPage = (totalcount/pageSize) + (totalcount%pageSize == 0 ? 0 : 1),
+                AllPage = (totalcount / pageSize) + (totalcount % pageSize == 0 ? 0 : 1),
                 CurrentPageIndex = pageIndex
             };
             return model;

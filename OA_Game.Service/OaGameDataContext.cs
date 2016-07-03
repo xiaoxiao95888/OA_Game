@@ -12,6 +12,7 @@ namespace OA_Game.Service
 {
     public class OaGameDataContext : DbContext, IDataContext
     {
+        public IDbSet<AdminUser> AdminUsers { get; set; }
         public IDbSet<Required> Requireds { get; set; }
 
         public IDbSet<ArticleCategory> ArticleCategories { get; set; }

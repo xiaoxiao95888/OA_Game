@@ -11,6 +11,7 @@ namespace OA_Game.Library.Services
 {
     public interface IDataContext : IObjectContextAdapter, IDisposable
     {
+        IDbSet<AdminUser> AdminUsers { get; set; }
         IDbSet<Required> Requireds { get; set; }
         IDbSet<ArticleCategory> ArticleCategories { get; set; }
         IDbSet<Article> Articles { get; set; }

@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@Scripts.Render("~/bundles/Admin")
+<script src="//cdn.staticfile.org/ckeditor/4.4.5/ckeditor.js"></script>
+<h2>Admin</h2>
+<div class="row">
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">新闻管理
+        <span class="pull-right">
+            <a href="#" data-bind="click:Admin.viewModel.Create">新建新闻</a>
+        </span>
+        </div>  
+        <!-- Table -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>标题</th>
+                    <th>描述</th>
+                    <th>分类</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach:viewModel.Articles">
+                <tr>
+                    <td data-bind="text:$index"></td>
+                    <td data-bind="text:Title"></td>
+                    <td data-bind="text:Description"></td>
+                    <td data-bind="text:ArticleCategoryName"></td>
+                    <td>
+                        <span><a href="#" data-bind="click:Admin.viewModel.Edit">编辑</a></span>
+                        <span><a href="#" data-bind="click:Admin.viewModel.Delete">删除</a></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>   
+</div>
+<div class="row">
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+            查看预定 (前20位)  
+            <span class="pull-right">
+                <a href="#" data-bind="click:Admin.viewModel.GetRequired">刷新</a>
+                <a href="/admin/ExportRequired" target="_blank">导出所有</a>
+            </span>        
+        </div>
+        <!-- Table -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>姓名</th>
+                    <th>Email</th>                    
+                </tr>
+            </thead>
+            <tbody data-bind="foreach:viewModel.Requireds.RequiredModels">
+                <tr>
+                    <td data-bind="text:$index"></td>
+                    <td data-bind="text:PersonName"></td>
+                    <td data-bind="text:Email"></td>
+                   
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <p class="text-center" data-bind="text:'总计'+viewModel.Requireds.TotalCount()"></p>
+    </div>
+</div>
+<div class="modal fade" id="article-dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>标题</label>
+                    <input class="form-control" data-bind="value:viewModel.Article.Title" />
+                </div>
+                <div class="form-group">
+                    <label>描述</label>
+                    <input class="form-control" data-bind="value:viewModel.Article.Description" />
+                </div>
+                <div class="form-group">
+                    <label>分类</label>
+                    <select class="form-control" data-bind="options: viewModel.ArticleCategorys,optionsText: 'Name', optionsCaption: '选择',value:viewModel.ArticleCategory"></select>
+                </div>
+
+                <div class="form-group">
+                    <label>缩略图</label>
+                    <input class="form-control" data-bind="value:viewModel.Article.ThumbnailUrl" />
+                </div>
+                     
+                <div class="form-group">
+                    <label>内容</label>                   
+                    <textarea id="content"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" data-bind="click:Admin.viewModel.Save">保存</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -9,7 +9,9 @@ namespace OA_Game.Web
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                         "~/Scripts/knockout-3.2.0.js",
+                         "~/Scripts/knockout.mapping-latest.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -26,6 +28,26 @@ namespace OA_Game.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            //HOME
+            bundles.Add(new StyleBundle("~/Content/Home").Include(
+                      "~/Content/tinycarousel.css",
+                      "~/Content/jquery-rebox.css"));
+            //Home
+            bundles.Add(new ScriptBundle("~/bundles/Home").Include(
+                   "~/Scripts/jquery.tinycarousel.js",
+                    "~/Scripts/jquery-rebox.js",
+                   "~/Scripts/js/Home.js"));
+
+            //Admin
+            bundles.Add(new ScriptBundle("~/bundles/Admin").Include(               
+                   "~/Scripts/js/Admin.js"));
+            //konckout
+            bundles.Add(new ScriptBundle("~/bundles/konckout").Include(
+                 "~/Scripts/knockout-3.2.0.js", "~/Scripts/knockout.mapping-latest.js"));
+
+            //moment
+            bundles.Add(new ScriptBundle("~/bundles/moment").Include(
+                 "~/Scripts/moment.js"));
         }
     }
 }
