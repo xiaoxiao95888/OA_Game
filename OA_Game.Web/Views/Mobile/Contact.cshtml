@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "独立游戏《嚻》的主页欢迎您！";
+    Layout = "~/Views/Shared/_MobileLayout.cshtml";
+}
+@Styles.Render("~/Content/Mobile")
+@Scripts.Render("~/bundles/konckout")
+@Scripts.Render("~/bundles/Contact")
+<style>
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+</style>
+<div class="row">
+    <blockquote>
+        <p>留言</p>
+    </blockquote>
+    <div class="form-horizontal" style="padding-left:2rem;padding-right:2rem;height:100%">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">姓名</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="姓名" data-bind="value:Contact.viewModel.Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">邮箱</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" placeholder="邮箱" data-bind="value:Contact.viewModel.Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">电话</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="电话" data-bind="value:Contact.viewModel.Phone">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">内容</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" rows="3" placeholder="内容" data-bind="value:Contact.viewModel.Content"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12  text-center">
+                <button type="submit" class="btn btn-default" style="margin: 0 auto" data-bind="click:Contact.viewModel.Submit">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

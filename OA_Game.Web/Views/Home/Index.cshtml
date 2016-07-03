@@ -20,7 +20,31 @@
         <div style="width:605px;height:405px;position: absolute;top:120px;left:320px"><embed id="390" width="605" height="405" allowscriptaccess="always" style="visibility: visible;" pluginspage="http://get.adobe.com/cn/flashplayer/" flashvars="playMovie=true&amp;auto=1" allowfullscreen="true" quality="hight" src="~/Content/images/ABUIABAyGAAgtvXPuwUooMmmigM.swf" type="application/x-shockwave-flash" wmode="transparent"></div>
     </div>
     <div style="margin: 0 auto;padding-top: 2rem;width:100%;text-align:center">
-        <img src="~/Content/images/ABUIABAEGAAgztW6uwUo4JHfRjDyAjg4.png" style="width:296px;height:auto" />
+        <img src="~/Content/images/349593316744282757.jpg" style="width:710px;height:auto" />
+    </div>
+    <div style="margin: 0 auto;margin-top: 5rem;width:100%;text-align:center;display:none" id="TotalCount">
+        <h3 style="color:#fff;">当前预定人数：<span data-bind="text:Home.viewModel.TotalCount" style="color:#"></span>位</h3>
+    </div>
+    <div style="width:520px; margin:0 auto; margin-top:6rem" id="book">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label" style="color:#fff">姓名</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" data-bind="value:Home.viewModel.RequiredModel.PersonName" placeholder="请输入姓名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" style="color:#fff">邮箱</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" data-bind="value:Home.viewModel.RequiredModel.Email" placeholder="请输入邮箱">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-8">
+                    <button type="button" class="btn btn-default" style="background-color:#000000;color:#fff;" data-bind="click:Home.viewModel.SubMit">提交</button>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="slider1" style="width:1120px;margin:0 auto; margin-top:3rem">
         <a class="buttons prev" href="#"><img src="~/Content/images/next.png" /></a>
@@ -64,36 +88,9 @@
     <div style="margin: 0 auto;margin-top: 5rem;width:100%;text-align:center">
         <img src="~/Content/images/ABUIABAEGAAg6de6uwUoyNOdQzCgAziTAQ.png" style="width:416px;height:auto" />
     </div>
-    <div style="margin: 0 auto;margin-top: 5rem;width:100%;text-align:center">
-        <h3 style="color:#fff;">当前预定人数：<span data-bind="text:Home.viewModel.TotalCount"></span>位</h3>
-    </div>
 
-    <div style="width:520px; margin:0 auto; " id="book">
-        <div class="panel panel-default" style="margin-top:6rem">
-            <div class="panel-heading text-center" style="background-color:#252525; color:#fff">填写预定信息</div>
-            <div class="panel-body">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">姓名</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" data-bind="value:Home.viewModel.RequiredModel.PersonName" placeholder="请输入姓名">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">邮箱</label>
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" data-bind="value:Home.viewModel.RequiredModel.Email" placeholder="请输入邮箱">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="button" class="btn btn-default" data-bind="click:Home.viewModel.SubMit">提交</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+
+
     <div style="color:#fff;width:650px;margin:0 auto;padding:6rem;" data-bind="foreach:Home.viewModel.Articles,visible:Home.viewModel.Articles().length!=0">
         <div class="media" style="margin-bottom:20px;">
             <div class="media-left">

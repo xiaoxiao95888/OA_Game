@@ -48,6 +48,17 @@ namespace OA_Game.Web
             //moment
             bundles.Add(new ScriptBundle("~/bundles/moment").Include(
                  "~/Scripts/moment.js"));
+            //Mobile
+            bundles.Add(new ScriptBundle("~/bundles/Mobile").Include(
+                 "~/Scripts/swiper.js",
+                 "~/Scripts/js/Mobile.js"));
+
+            bundles.Add(new StyleBundle("~/Content/Mobile").Include(
+                     "~/Content/swiper.css",
+                     "~/Content/jquery-rebox.css"));
+            //Contact
+            bundles.Add(new ScriptBundle("~/bundles/Contact").Include(              
+               "~/Scripts/js/Contact.js"));
         }
     }
 }

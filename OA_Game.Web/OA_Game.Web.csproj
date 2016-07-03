@@ -223,15 +223,19 @@
     <Compile Include="Controllers\API\ArticleCategoryController.cs" />
     <Compile Include="Controllers\API\ArticleController.cs" />
     <Compile Include="Controllers\API\BaseApiController.cs" />
+    <Compile Include="Controllers\API\ContactController.cs" />
     <Compile Include="Controllers\API\RequiredController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MobileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MailHelp.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ArticleCategoryModel.cs" />
     <Compile Include="Models\ArticleModel.cs" />
+    <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RequiredModel.cs" />
@@ -245,6 +249,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap1.css" />
     <Content Include="Content\bootstrap.min1.css" />
+    <Content Include="Content\images\349593316744282757.jpg" />
     <Content Include="Content\images\ABUIABACGAAgyvzPuwUoiumP0wUw8Ac44Qc.jpg" />
     <Content Include="Content\images\ABUIABACGAAg_b7KuwUoos-33QcwmAM4MA.jpg" />
     <Content Include="Content\images\ABUIABACGAAg_LnFuwUo2q-F6wEwrgM4rgM.jpg" />
@@ -254,6 +259,8 @@
     <Content Include="Content\images\ABUIABAEGAAg6de6uwUoyNOdQzCgAziTAQ.png" />
     <Content Include="Content\images\ABUIABAEGAAgztW6uwUo4JHfRjDyAjg4.png" />
     <Content Include="Content\images\ABUIABAyGAAgtvXPuwUooMmmigM.swf" />
+    <Content Include="Content\images\mobile\1.jpg" />
+    <Content Include="Content\images\mobile\2.jpg" />
     <Content Include="Content\images\next.png" />
     <Content Include="Content\images\pattern.jpg" />
     <Content Include="Content\images\prev.png" />
@@ -264,6 +271,7 @@
     <Content Include="Content\images\slide\5.jpg" />
     <Content Include="Content\images\slide\6.jpg" />
     <Content Include="Content\jquery-rebox.css" />
+    <Content Include="Content\swiper.css" />
     <Content Include="Content\Test.mp3" />
     <Content Include="Content\tinycarousel.css" />
     <Content Include="favicon.ico" />
@@ -286,7 +294,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\js\Admin.js" />
+    <Content Include="Scripts\js\Contact.js" />
     <Content Include="Scripts\js\Home.js" />
+    <Content Include="Scripts\js\Mobile.js" />
     <Content Include="Scripts\knockout-3.2.0.js" />
     <Content Include="Scripts\knockout.mapping-latest.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
@@ -294,6 +304,7 @@
     <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\swiper.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -334,6 +345,10 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Admin.cshtml" />
     <Content Include="Views\Home\ArticleDetail.cshtml" />
+    <Content Include="Views\Shared\_MobileLayout.cshtml" />
+    <Content Include="Views\Mobile\Index.cshtml" />
+    <Content Include="Views\Mobile\About.cshtml" />
+    <Content Include="Views\Mobile\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

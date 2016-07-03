@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "独立游戏《嚻》的主页欢迎您！";
+    Layout = "~/Views/Shared/_MobileLayout.cshtml";
+}
+@Styles.Render("~/Content/Mobile")
+@Scripts.Render("~/bundles/Mobile")
+<style>
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        min-height: 130px;
+        padding: 5px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+       
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        height: 80px;
+        
+    }
+</style>
+<div class="row">
+    <img src="~/Content/images/mobile/1.jpg" class="img-responsive" />
+</div>
+<div class="row" style="background-color:#000;">
+    <img src="~/Content/images/mobile/2.jpg" class="img-responsive" style="margin:0 auto" />
+</div>
+<div class="row" style="padding-top:1rem;background-color:#000">
+    @*<blockquote>
+        <p style="color:#fff">图册展示</p>
+    </blockquote>*@
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img class="img-responsive" src="../../Content/images/slide/1.jpg" />
+            </div>
+            <div class="swiper-slide"><img class="img-responsive" src="../../Content/images/slide/2.jpg" /></div>
+            <div class="swiper-slide"><img class="img-responsive" src="../../Content/images/slide/3.jpg" /></div>
+            <div class="swiper-slide"><img class="img-responsive" src="../../Content/images/slide/4.jpg" /></div>
+            <div class="swiper-slide"><img class="img-responsive" src="../../Content/images/slide/5.jpg" /></div>
+            <div class="swiper-slide"><img class="img-responsive" src="../../Content/images/slide/6.jpg" /></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination></div>
+    </div>
+</div>
+<div class="row" style="background-color:#000;">
+    <img src="~/Content/images/ABUIABAEGAAg6de6uwUoyNOdQzCgAziTAQ.png" class="img-responsive" style="margin:0 auto">
+    <img src="~/Content/images/ABUIABACGAAg_LnFuwUo2q-F6wEwrgM4rgM.jpg" class="img-responsive" style="width:100px;height:auto;margin:0 auto; padding-top:3rem;padding-bottom:3rem" />
+</div>
+
