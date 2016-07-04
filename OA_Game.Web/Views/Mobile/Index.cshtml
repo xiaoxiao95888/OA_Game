@@ -29,13 +29,16 @@
         align-items: center;
         height: 80px;
     }
+    .repetition {
+       -webkit-animation-iteration-count: infinite;
+    }
 </style>
 <div class="row">
     <img src="~/Content/images/mobile/1.jpg" class="img-responsive" />
 </div>
 <div class="row" style="background-color: #000; padding-bottom: 1.5rem">
     <a href="#" data-bind="click:Mobile.viewModel.Schedule">
-        <img src="~/Content/images/mobile/2.jpg" class="img-responsive" style="margin: 0 auto" />
+        <img src="~/Content/images/mobile/2.jpg" class="img-responsive animated pulse repetition" style="margin: 0 auto" />
     </a>
 </div>
 
@@ -66,7 +69,7 @@
         </div>
     </div>
     <div style="margin: 0 auto;margin-top: 3rem;margin-bottom: 3rem;width:100%;text-align:center;display:none" id="TotalCount">
-        <h3 style="color:#fff;">当前预定人数：<span data-bind="text:Mobile.viewModel.TotalCount" style="color:#a52a2a"></span>位</h3>
+        <h4 style="color:#fff;">预定成功！当前人数：<span data-bind="text:Mobile.viewModel.TotalCount" style="color:#a52a2a"></span>位</h4>
     </div>
 </div>
 

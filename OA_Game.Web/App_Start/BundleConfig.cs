@@ -31,7 +31,8 @@ namespace OA_Game.Web
             //HOME
             bundles.Add(new StyleBundle("~/Content/Home").Include(
                       "~/Content/tinycarousel.css",
-                      "~/Content/jquery-rebox.css"));
+                      "~/Content/jquery-rebox.css",
+                      "~/Content/animate.css"));
             //Home
             bundles.Add(new ScriptBundle("~/bundles/Home").Include(
                    "~/Scripts/jquery.tinycarousel.js",
@@ -52,10 +53,10 @@ namespace OA_Game.Web
             bundles.Add(new ScriptBundle("~/bundles/Mobile").Include(
                  "~/Scripts/swiper.js",
                  "~/Scripts/js/Mobile.js"));
-
+            //Mobile
             bundles.Add(new StyleBundle("~/Content/Mobile").Include(
                      "~/Content/swiper.css",
-                     "~/Content/jquery-rebox.css"));
+                     "~/Content/animate.css"));
             //Contact
             bundles.Add(new ScriptBundle("~/bundles/Contact").Include(              
                "~/Scripts/js/Contact.js"));

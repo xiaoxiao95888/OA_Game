@@ -32,7 +32,7 @@ Mobile.viewModel.SubMit = function () {
             } else {
                 Mobile.viewModel.GetCount();
                 $("#book").hide();
-                $("#TotalCount").show(function () { alert("预定成功"); });
+                $("#TotalCount").show();
                 
             }
         });
