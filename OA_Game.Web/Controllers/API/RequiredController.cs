@@ -24,7 +24,7 @@ namespace OA_Game.Web.Controllers.API
 
         public object Post(RequiredModel model)
         {
-            if (string.IsNullOrEmpty(model.PersonName) || string.IsNullOrEmpty(model.Email))
+            if (string.IsNullOrEmpty(model.Phone) || string.IsNullOrEmpty(model.Email))
             {
                 return Failed("请填写完整");
             }
@@ -37,7 +37,7 @@ namespace OA_Game.Web.Controllers.API
             {
                 return Failed("禁止重复提交");
             }
-            var required = new Required { Id = Guid.NewGuid(), Email = model.Email, PersonName = model.PersonName };
+            var required = new Required { Id = Guid.NewGuid(), Email = model.Email, Phone = model.Phone };
             _requiredService.Insert(required);
             return Success();
         }
@@ -62,7 +62,7 @@ namespace OA_Game.Web.Controllers.API
                                 Id = n.Id,
                                 CreatedTime = n.CreatedTime,
                                 Email = n.Email,
-                                PersonName = n.PersonName
+                                Phone = n.Phone
                             }).ToArray(),
                 TotalCount = totalcount,
                 AllPage = (totalcount / pageSize) + (totalcount % pageSize == 0 ? 0 : 1),

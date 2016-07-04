@@ -11,26 +11,35 @@
         <img src="~/Content/images/ABUIABACGAAg_b7KuwUoos-33QcwmAM4MA.jpg" />
     </div>
     <div style="width: 1280px; position: relative; height: 620px; overflow: hidden; margin: 0px auto; margin-top: 6rem;">
-        <div style="position:absolute;width:100%">
+        <div style="position: absolute; width: 100%">
             <img class="" src="~/Content/images/ABUIABAEGAAg1YSwuwUo3su9eDCACjjsBA.png" />
         </div>
 
-        <div style="position: absolute;left:1015px;"><img src="~/Content/images/ABUIABADGAAgpevKuwUo75LGngIwrAI4kAM.gif" /></div>
-        <div style="position: absolute;left:475px;top:230px"><img style="width:196px;height:110px" src="~/Content/images/ABUIABADGAAg2ajPuwUoxoyNsQMwtAE4eA.gif" /></div>
-        <div style="width:605px;height:405px;position: absolute;top:120px;left:320px"><embed id="390" width="605" height="405" allowscriptaccess="always" style="visibility: visible;" pluginspage="http://get.adobe.com/cn/flashplayer/" flashvars="playMovie=true&amp;auto=1" allowfullscreen="true" quality="hight" src="~/Content/images/ABUIABAyGAAgtvXPuwUooMmmigM.swf" type="application/x-shockwave-flash" wmode="transparent"></div>
+        <div style="position: absolute; left: 1015px;">
+            <img src="~/Content/images/ABUIABADGAAgpevKuwUo75LGngIwrAI4kAM.gif" />
+        </div>
+        <div style="position: absolute; left: 475px; top: 230px">
+            <img style="width: 196px; height: 110px" src="~/Content/images/ABUIABADGAAg2ajPuwUoxoyNsQMwtAE4eA.gif" />
+        </div>
+        <div style="width: 605px; height: 405px; position: absolute; top: 120px; left: 320px">
+            <embed id="390" width="605" height="405" allowscriptaccess="always" style="visibility: visible;" pluginspage="http://get.adobe.com/cn/flashplayer/" flashvars="playMovie=true&amp;auto=1" allowfullscreen="true" quality="hight" src="~/Content/images/ABUIABAyGAAgtvXPuwUooMmmigM.swf" type="application/x-shockwave-flash" wmode="transparent">
+        </div>
     </div>
-    <div style="margin: 0 auto;padding-top: 2rem;width:100%;text-align:center">
-        <img src="~/Content/images/349593316744282757.jpg" style="width:710px;height:auto" />
+    <div style="margin: 0 auto; padding-top: 2rem; width: 100%; text-align: center">
+        <a href="#" data-bind="click:Home.viewModel.Schedule">
+            <img src="~/Content/images/ABUIABAEGAAgztW6uwUo4JHfRjDyAjg4.png" style="width: 296px; height: auto" />
+        </a>
     </div>
-    <div style="margin: 0 auto;margin-top: 5rem;width:100%;text-align:center;display:none" id="TotalCount">
-        <h3 style="color:#fff;">当前预定人数：<span data-bind="text:Home.viewModel.TotalCount" style="color:#"></span>位</h3>
+
+    <div style="margin: 0 auto; padding-top: 2rem; width: 100%; text-align: center;display:none">
+        <img src="~/Content/images/349593316744282757.jpg" style="width: 710px; height: auto" />
     </div>
-    <div style="width:520px; margin:0 auto; margin-top:6rem" id="book">
+    <div style="width:520px; margin:0 auto; margin-top: 6rem;display:none" id="book">
         <div class="form-horizontal">
             <div class="form-group">
-                <label class="col-sm-2 control-label" style="color:#fff">姓名</label>
+                <label class="col-sm-2 control-label" style="color:#fff">手机</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" data-bind="value:Home.viewModel.RequiredModel.PersonName" placeholder="请输入姓名">
+                    <input type="text" class="form-control" data-bind="value:Home.viewModel.RequiredModel.Phone" placeholder="请输入手机">
                 </div>
             </div>
             <div class="form-group">
@@ -46,7 +55,11 @@
             </div>
         </div>
     </div>
-    <div id="slider1" style="width:1120px;margin:0 auto; margin-top:3rem">
+    <div style="margin: 0 auto;margin-top: 5rem;width:100%;text-align:center;display:none" id="TotalCount">
+        <h3 style="color:#fff;">当前预定人数：<span data-bind="text:Home.viewModel.TotalCount" style="color:#a52a2a"></span>位</h3>
+    </div>
+
+    <div id="slider1" style="width: 1120px; margin:0 auto; margin-top:3rem">
         <a class="buttons prev" href="#"><img src="~/Content/images/next.png" /></a>
         <div class="viewport">
             <ul class="overview">
@@ -85,13 +98,11 @@
         <a class="buttons next" href="#"><img src="~/Content/images/prev.png" /></a>
 
     </div>
-    <div style="margin: 0 auto;margin-top: 5rem;width:100%;text-align:center">
-        <img src="~/Content/images/ABUIABAEGAAg6de6uwUoyNOdQzCgAziTAQ.png" style="width:416px;height:auto" />
+    <div style="margin: 0 auto; margin-top: 15rem; width: 100%; text-align: center">
+        <img src="~/Content/images/ABUIABAEGAAg6de6uwUoyNOdQzCgAziTAQ.png" style="width: 416px; height: auto" />
     </div>
-
-
-
-    <div style="color:#fff;width:650px;margin:0 auto;padding:6rem;" data-bind="foreach:Home.viewModel.Articles,visible:Home.viewModel.Articles().length!=0">
+    @*新闻部分*@
+    @*<div style="color:#fff;width:650px;margin:0 auto;padding:6rem;" data-bind="foreach:Home.viewModel.Articles,visible:Home.viewModel.Articles().length!=0">
         <div class="media" style="margin-bottom:20px;">
             <div class="media-left">
                 <a href="#" data-bind="click:Home.viewModel.ArticleDetail">
@@ -109,7 +120,7 @@
             </div>
         </div>
 
-    </div>
+    </div>*@
     <div style="margin: 0 auto;margin-top: 5rem;width:100%;text-align:center">
         <div class="col-md-6 text-center">
             <div style="width:125px; color:#d88014;float:right">

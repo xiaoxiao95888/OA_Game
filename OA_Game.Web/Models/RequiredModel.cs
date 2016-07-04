@@ -8,7 +8,7 @@ namespace OA_Game.Web.Models
     public class RequiredModel
     {
         public Guid Id { get; set; }
-        public string PersonName { get; set; }
+        public string Phone { get; set; }
         public string Email { get; set; }
         public DateTime CreatedTime { get; set; }
     }

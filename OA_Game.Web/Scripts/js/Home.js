@@ -23,7 +23,7 @@ var Home = {
     viewModel: {
         TotalCount: ko.observable(0),
         RequiredModel: {
-            PersonName: ko.observable(),
+            Phone: ko.observable(),
             Email: ko.observable()
         },
         Articles: ko.observableArray(),
@@ -73,9 +73,17 @@ Home.viewModel.GetCount = function () {
         Home.viewModel.TotalCount(result.TotalCount);
     });
 }
+Home.viewModel.Schedule = function (data, event) {
+    var dom = $(event.target);
+    dom.fadeOut(function () {
+        $($("#book").prev()).fadeIn();
+        $("#book").fadeIn();
+
+    });
+}
 Home.viewModel.SubMit = function () {
     var model = ko.toJS(Home.viewModel.RequiredModel);
-    if (model.PersonName == null || model.Email == null) {
+    if (model.Phone == null || model.Email == null) {
         alert("请填写完整");
     } else {
         $.post("/api/Required", model, function (result) {
@@ -91,9 +99,9 @@ Home.viewModel.SubMit = function () {
     }
 };
 Home.viewModel.GetArticles = function () {
-    $.get("/api/Article", function (result) {
+    $.get("/api/Article", function(result) {
         ko.mapping.fromJS(result, {}, Home.viewModel.Articles);
-    })
+    });
 }
 $(function () {
     $('#slider1').tinycarousel();    

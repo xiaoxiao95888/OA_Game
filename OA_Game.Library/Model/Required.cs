@@ -10,7 +10,7 @@ namespace OA_Game.Library.Model
     public class Required : IDtStamped
     {
         public Guid Id { get; set; }
-        public string PersonName { get; set; }
+        public string Phone { get; set; }
         public string Email { get; set; }
         public DateTime CreatedTime { get; set; }
         public bool IsDeleted { get; set; }
