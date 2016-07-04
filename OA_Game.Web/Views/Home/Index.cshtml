@@ -103,24 +103,24 @@
     </div>
     @*新闻部分*@
     @*<div style="color:#fff;width:650px;margin:0 auto;padding:6rem;" data-bind="foreach:Home.viewModel.Articles,visible:Home.viewModel.Articles().length!=0">
-        <div class="media" style="margin-bottom:20px;">
-            <div class="media-left">
-                <a href="#" data-bind="click:Home.viewModel.ArticleDetail">
-                    <img data-bind="attr:{src:ThumbnailUrl}" class="media-object" style="width: 80px; height: 80px;">
-                </a>
+            <div class="media" style="margin-bottom:20px;">
+                <div class="media-left">
+                    <a href="#" data-bind="click:Home.viewModel.ArticleDetail">
+                        <img data-bind="attr:{src:ThumbnailUrl}" class="media-object" style="width: 80px; height: 80px;">
+                    </a>
+                </div>
+                <div class="media-body">
+
+                    <h4 class="media-heading">
+                        <a href="#" data-bind="click:Home.viewModel.ArticleDetail,text:Title" style="color:#fff;text-decoration:none"></a>
+                        <span class="pull-right" style="font-size:9px;" data-bind="date:UpdateTime"></span>
+                    </h4>
+
+                    <p data-bind="text:Description" style="margin-top:15px;line-height:20px;"></p>
+                </div>
             </div>
-            <div class="media-body">
 
-                <h4 class="media-heading">
-                    <a href="#" data-bind="click:Home.viewModel.ArticleDetail,text:Title" style="color:#fff;text-decoration:none"></a>
-                    <span class="pull-right" style="font-size:9px;" data-bind="date:UpdateTime"></span>
-                </h4>
-
-                <p data-bind="text:Description" style="margin-top:15px;line-height:20px;"></p>
-            </div>
-        </div>
-
-    </div>*@
+        </div>*@
     <div style="margin: 0 auto;margin-top: 5rem;width:100%;text-align:center">
         <div class="col-md-6 text-center">
             <div style="width:125px; color:#d88014;float:right">
