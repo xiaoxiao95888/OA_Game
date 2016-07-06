@@ -109,4 +109,16 @@ $(function () {
     ko.applyBindings(Home);
     Home.viewModel.GetCount();
     Home.viewModel.GetArticles();
+    $.ajax({
+        type: "put",
+        url: "/api/pv/",
+        contentType: "application/json",
+        dataType: "json",
+        success: function () {
+            $.get("/api/pv", function (count) {
+                $("#pv").text("访问人数："+count);
+            });
+        }
+    });
+   
 })

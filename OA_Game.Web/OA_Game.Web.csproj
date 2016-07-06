@@ -208,6 +208,7 @@
     <Compile Include="Controllers\API\ArticleController.cs" />
     <Compile Include="Controllers\API\BaseApiController.cs" />
     <Compile Include="Controllers\API\ContactController.cs" />
+    <Compile Include="Controllers\API\PvController.cs" />
     <Compile Include="Controllers\API\RequiredController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />

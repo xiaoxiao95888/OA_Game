@@ -46,7 +46,7 @@ namespace OA_Game.Web
                 UseDefaultCredentials = false,
                 Credentials = new System.Net.NetworkCredential(userName, pwd),
                 DeliveryMethod = SmtpDeliveryMethod.Network,
-
+                EnableSsl=true
             };
             try
             {

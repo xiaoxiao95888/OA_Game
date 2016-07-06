@@ -47,6 +47,17 @@ $(function () {
         autoplay: 2500,
         autoplayDisableOnInteraction: false
     });
+    $.ajax({
+        type: "put",
+        url: "/api/pv/",
+        contentType: "application/json",
+        dataType: "json",
+        success: function () {
+            $.get("/api/pv", function (count) {
+                $("#pv").text("访问人数：" + count);
+            });
+        }
+    });
     ko.applyBindings(Mobile);
     Mobile.viewModel.GetCount();
 })

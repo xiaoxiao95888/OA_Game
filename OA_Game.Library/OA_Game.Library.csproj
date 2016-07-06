@@ -61,12 +61,14 @@
     <Compile Include="Model\Article.cs" />
     <Compile Include="Model\ArticleCategory.cs" />
     <Compile Include="Model\Interfaces\IDtStamped.cs" />
+    <Compile Include="Model\Pv.cs" />
     <Compile Include="Model\Required.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IAdminUserService.cs" />
     <Compile Include="Services\IArticleCategoryService.cs" />
     <Compile Include="Services\IArticleService.cs" />
     <Compile Include="Services\IDataContext.cs" />
+    <Compile Include="Services\IPvService.cs" />
     <Compile Include="Services\IRequiredService.cs" />
   </ItemGroup>
   <ItemGroup>
