@@ -12,14 +12,18 @@
     @Scripts.Render("~/bundles/moment")
 
 </head>
-<body style=" background-color: #000000;">
+<body style=" background-color #000000;">
     <div class="container" style="min-width: 1330px !important;">
         @RenderBody()
 
     </div>
     <footer>
-        <div style="height:125px;width:100%; text-align:center; color:#808080; line-height:125px; margin-top:60px; background:rgba(0, 0, 0, 0) url('../../Content/images/pattern.jpg') repeat scroll 0 0;">
-            <span>2016 一路人 版权所有 <span id="pv"></span></span>
+        <div style="width:100%; text-align:center; color:#808080; margin-top:60px; background:rgba(0, 0, 0, 0) url('../../Content/images/pattern.jpg') repeat scroll 0 0;">
+            <div style="padding:20px;">
+                <p>2016 一路人 版权所有 </p>
+                <p id="pv"></p>
+            </div>
+
         </div>
     </footer>
 
