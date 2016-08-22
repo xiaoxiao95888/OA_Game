@@ -58,6 +58,7 @@
     <Compile Include="Services\ArticleService.cs" />
     <Compile Include="Services\PvService.cs" />
     <Compile Include="Services\RequiredService.cs" />
+    <Compile Include="Services\SettingService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

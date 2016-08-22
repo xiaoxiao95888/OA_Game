@@ -35,6 +35,10 @@ var Home = {
             ThumbnailUrl: ko.observable(),
             ArticleCategoryId: ko.observable(),
             IsDeleted: ko.observable()
+        },
+        Setting: {
+            Id: ko.observable(),
+            VideoUrl: ko.observable()
         }
     }
 };
@@ -120,5 +124,7 @@ $(function () {
             });
         }
     });
-   
+    $.get("/api/Setting/", function (data) {
+        ko.mapping.fromJS(data, {}, Home.viewModel.Setting);
+    })
 })

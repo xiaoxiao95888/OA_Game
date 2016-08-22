@@ -16,6 +16,10 @@
             RequiredModels: ko.observableArray(),
             TotalCount: ko.observable()
         },
+        Setting: {
+            Id: ko.observable(),
+            VideoUrl: ko.observable()
+        }
     }
 };
 ko.bindingHandlers.date = {
@@ -152,6 +156,24 @@ Admin.viewModel.GetRequired = function () {
         alert("完成");
     })
 }
+Admin.viewModel.SaveSetting = function () {
+    var model = ko.mapping.toJS(Admin.viewModel.Setting);
+    $.ajax({
+        type: "PUT",
+        url: "/api/Setting/",
+        contentType: "application/json",
+        data: JSON.stringify(model),
+        dataType: "json",
+        success: function (result) {
+            if (result.Error) {
+                alert(result.Message);
+            } else {
+                $("#article-dialog").modal("hide");           
+                alert("操作成功");
+            }
+        }
+    });
+}
 $(function () {    
     ko.applyBindings(Admin);
     $.get("/api/ArticleCategory", function (categorys) {
@@ -166,5 +188,8 @@ $(function () {
     })
     $.get("/api/Required/", function (data) {
         ko.mapping.fromJS(data, {}, Admin.viewModel.Requireds);
+    })
+    $.get("/api/Setting/", function (data) {
+        ko.mapping.fromJS(data, {}, Admin.viewModel.Setting);
     })
 })

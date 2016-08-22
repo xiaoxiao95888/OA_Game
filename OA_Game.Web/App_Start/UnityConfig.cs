@@ -19,6 +19,7 @@ namespace OA_Game.Web
             container.RegisterType<IRequiredService, RequiredService>();
             container.RegisterType<IArticleService, ArticleService>();
             container.RegisterType<IPvService, PvService>();
+            container.RegisterType<ISettingService, SettingService>();
 
             container.RegisterType<IArticleCategoryService, ArticleCategoryService>();
             container.RegisterType<IAdminUserService, AdminUserService>();
