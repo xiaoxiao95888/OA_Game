@@ -12,13 +12,13 @@
     }
 </style>
 <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?27f536f2c2d7d32d6fbce8ede7d3957d";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?27f536f2c2d7d32d6fbce8ede7d3957d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
 </script>
 
 <audio autoplay="true" loop="true"><source src="~/Content/Test.mp3"></audio>
@@ -116,7 +116,9 @@ var _hmt = _hmt || [];
 
     </div>
     <div style="margin: 0 auto; width: 100%; text-align: center">
-        <embed data-bind="attr:{src:Home.viewModel.Setting.VideoUrl}" allowFullScreen="true" quality="high" width="1020" height="650" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" />
+        @*<embed id="390" width="1020" height="650" allowscriptaccess="always" style="visibility: visible;" pluginspage="http://get.adobe.com/cn/flashplayer/" flashvars="playMovie=true&amp;auto=1" allowfullscreen="true" quality="hight" data-bind="attr:{src:Home.viewModel.Setting.VideoUrl}" type="application/x-shockwave-flash" wmode="transparent">*@
+        <iframe height=650 width=1020  data-bind="attr:{src:Home.viewModel.Setting.VideoUrl}" frameborder=0 'allowfullscreen'></iframe>
+      
     </div>
     <div style="margin: 0 auto; margin-top: 15rem; width: 100%; text-align: center">
         <img src="~/Content/images/ABUIABAEGAAg6de6uwUoyNOdQzCgAziTAQ.png" style="width: 416px; height: auto" />
